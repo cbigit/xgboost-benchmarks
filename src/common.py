@@ -22,7 +22,7 @@ def get_test_data(size: int = 1):
 
 ##CB
 def cnvrg_log_stats(mean):
-    print("cnvrg_tag_mean:",mean)
+    print("cnvrg_tag_mean: ",mean)
     
 def calculate_stats(time_list):
     """Calculate mean and standard deviation of a list"""
