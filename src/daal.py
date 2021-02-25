@@ -58,4 +58,7 @@ def run_inference(num_observations:int = 1000):
         inference_time = total_time*(10e6)/num_rows
         inference_times.append(inference_time)
 
+    metrics_df = pd.DataFrame(common.calculate_stats(inference_times))
+    metrics_df[["mean","median"]].plot();
+
     print(num_observations, ", ", common.calculate_stats(inference_times))
