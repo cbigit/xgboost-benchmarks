@@ -20,7 +20,11 @@ def get_test_data(size: int = 1):
 
     return test_df[:size]
 
-
+##CB
+def cnvrg_log_stats(case, median, mean, std_dev, min_time, max_time, quantile_10, quantile_90):
+    print("cnvrg_tag_case:", case)
+    print("cnvrg_tag_mean:",mean)
+    
 def calculate_stats(time_list):
     """Calculate mean and standard deviation of a list"""
     time_array = np.array(time_list)
