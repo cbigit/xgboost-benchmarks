@@ -21,7 +21,7 @@ def get_test_data(size: int = 1):
     return test_df[:size]
 
 ##CB
-def cnvrg_log_stats(mean):
+def cnvrg_log_stats(median, mean, std_dev, min_time, max_time, quantile_10, quantile_90):
     print("cnvrg_tag_mean: ",mean)
     print("cnvrg_tag_median: ",median)
     print("cnvrg_tag_std_dev: ",std_dev)
