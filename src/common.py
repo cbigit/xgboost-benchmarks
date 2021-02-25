@@ -43,6 +43,13 @@ def calculate_stats(time_list):
     quantile_90 = np.quantile(time_array, 0.9)
 
     ##CB
-    cnvrg_log_stats(median, mean, std_dev, min_time, max_time, quantile_10, quantile_90)
+    ##cnvrg_log_stats(median, mean, std_dev, min_time, max_time, quantile_10, quantile_90)
     
-    return (median, mean, std_dev, min_time, max_time, quantile_10, quantile_90)
+    return [median, mean, std_dev, min_time, max_time, quantile_10, quantile_90]
+
+def cnvrg_stats(in_list):
+    metrics = ["num_observations", "median", "mean", "std_dev", "min_time", "max_time", "quantile_10", "quantile_90"]
+    mp = []
+    [mp.append("cnvrg_tag_: ", m) m for m in metrics]
+    return mp
+    
