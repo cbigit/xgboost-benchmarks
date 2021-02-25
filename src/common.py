@@ -23,6 +23,12 @@ def get_test_data(size: int = 1):
 ##CB
 def cnvrg_log_stats(mean):
     print("cnvrg_tag_mean: ",mean)
+    print("cnvrg_tag_median: ",median)
+    print("cnvrg_tag_std_dev: ",std_dev)
+    print("cnvrg_tag_max_time: ",max_time)
+    print("cnvrg_tag_min_time: ",min_time)
+    print("cnvrg_tag_quantile_10: ",quantile_10)
+    print("cnvrg_tag_quantile_90: ",quantile_90)
     
 def calculate_stats(time_list):
     """Calculate mean and standard deviation of a list"""
