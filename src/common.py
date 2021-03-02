@@ -50,6 +50,6 @@ def calculate_stats(time_list):
 def cnvrg_stats(in_list):
     metrics = ["num_observations", "median", "mean", "std_dev", "min_time", "max_time", "quantile_10", "quantile_90"]
     mp = []
-    [mp.append("cnvrg_tag_: ", m) m for m in metrics]
+    [mp.append("cnvrg_tag_: ", m) for m in metrics]
     return mp
     
