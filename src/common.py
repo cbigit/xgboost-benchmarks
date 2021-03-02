@@ -30,7 +30,8 @@ def cnvrg_log_stats(median, mean, std_dev, min_time, max_time, quantile_10, quan
     print("cnvrg_tag_quantile_10: ",quantile_10)
     print("cnvrg_tag_quantile_90: ",quantile_90)
     
-def calculate_stats(time_list):
+#def calculate_stats(time_list):
+def calculate_stats(num_observations, time_list):
     """Calculate mean and standard deviation of a list"""
     time_array = np.array(time_list)
 
@@ -43,13 +44,18 @@ def calculate_stats(time_list):
     quantile_90 = np.quantile(time_array, 0.9)
 
     ##CB
-    ##cnvrg_log_stats(median, mean, std_dev, min_time, max_time, quantile_10, quantile_90)
+    cnvrg_stats([num_observations, median, mean, std_dev, min_time, max_time, quantile_10, quantile_90])
     
     return [median, mean, std_dev, min_time, max_time, quantile_10, quantile_90]
-
+    #return [median, mean, std_dev, min_time, max_time, quantile_10, quantile_90
+        
 def cnvrg_stats(in_list):
-    metrics = ["num_observations", "median", "mean", "std_dev", "min_time", "max_time", "quantile_10", "quantile_90"]
+    metrics = ["#", "median", "mean", "std_dev", "min_time", "max_time", "quantile_10", "quantile_90"]
+    num=in_list[0]
+    
     mp = []
-    [mp.append("cnvrg_tag_: ", m) for m in metrics]
+    print("cnvrg_tag_#: ", num);
+    for idx, m in metrics[1:]:
+        print("cnvrg_tag_", num, "_" + m + ": ", in_list[idx]);
     return mp
     
