@@ -57,5 +57,7 @@ def run_inference(num_observations:int = 1000):
 
         inference_time = total_time*(10e6)/num_rows
         inference_times.append(inference_time)
-        
-    print(num_observations, ", ", common.calculate_stats(inference_times))
+    
+    #mp.append("cnvrg_tag_: ", m)
+    print(common.calculate_stats(num_observations, inference_times))    
+    #print(num_observations, ", ", common.calculate_stats(inference_times))
