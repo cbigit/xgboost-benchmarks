@@ -56,6 +56,7 @@ def cnvrg_stats(in_list):
     mp = []
     print("cnvrg_tag_#: ", num);
     for idx, m in enumerate(metrics[1:]):
-        print('cnvrg_tag_' + str(num) + '_' + m + ': ', in_list[idx]);
+        print('cnvrg_tag_' + str(num) + '_' + m + ': ', in_list[idx], )
+    print("");
     return mp
     
