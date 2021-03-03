@@ -45,5 +45,6 @@ def run_inference(num_observations:int = 1000):
 
         inference_time3 = total_time3*(10e6)/num_rows
         inference_times3.append(inference_time3)
-		
-    print(num_observations, ", ", common.calculate_stats(inference_times3))
+    
+    common.calculate_stats(num_observations, inference_times3)	
+    #print(num_observations, ", ", common.calculate_stats(inference_times3))
